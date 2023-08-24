@@ -5,7 +5,7 @@ import snowflake.connector
 from urllib.error import URLError
 
 
-my_cur = my_cnx.cursor()
+
 
 streamlit.title('My Parents New Healthy Diner')
 streamlit.header ('Breakfast Menu')
@@ -48,9 +48,6 @@ except URLError as e:
   streamlit.error()
 
 
-
-my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
-my_data_rows = my_cur.fetchall()
 
 streamlit.header("The fruit load list contains:")
 #Snowflake-related functions
